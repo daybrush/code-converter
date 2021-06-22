@@ -1,0 +1,27 @@
+import Moveable from "moveable";
+
+let translate = [0, 0];
+const target = document.querySelector(".target");
+
+const moveable = new Moveable(document.querySelector(".container"), {
+    target: target,
+    draggable: draggable,
+    throttleDrag: throttleDrag,
+    edgeDraggable: edgeDraggable,
+    startDragRotate: startDragRotate,
+    throttleDragRotate: throttleDragRotate,
+});
+
+moveable.on("dragStart", e => {
+    e.set(translate);
+});
+moveable.on("drag", e => {
+    e.target.style.transform = `translate(${e.beforeTranslate[0]}px, ${e.beforeTranslate[1]}px)`;
+});
+moveable.on("dragEnd", e => {
+    const lastEvent = e.lastEvent;
+
+    if (lastEvent) {
+        translate = lastEvent.beforeTranslate;
+    }
+});

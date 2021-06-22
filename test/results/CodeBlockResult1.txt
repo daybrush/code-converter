@@ -1,0 +1,11 @@
+const viewer = new InfiniteViewer(
+    document.querySelector(".a"),
+    document.querySelector(".b"),
+    {
+        a: b,
+        addd: b,
+        a: bsdsdsdsdsdsd,
+        asdsd: b,
+        asdsd: bsdsdsd,
+    },
+);

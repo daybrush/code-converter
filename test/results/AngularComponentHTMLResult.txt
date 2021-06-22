@@ -1,0 +1,17 @@
+<div class="root">
+    <div class="container" style="transform-origin: 0 0;transform: scale(containerScale);">
+        <div #target class="target">
+            Target
+        </div>
+        <ngx-moveable
+            [target]="target"
+            [draggable]="draggable"
+            [throttleDrag]="throttleDrag"
+            [edgeDraggable]="edgeDraggable"
+            [startDragRotate]="startDragRotate"
+            [throttleDragRotate]="throttleDragRotate"
+            @dragStart="onDragStart"
+            @drag="onDrag"
+            @dragEnd="onDragEnd"></ngx-moveable>
+    </div>
+</div>

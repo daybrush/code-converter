@@ -1,0 +1,7 @@
+<div class="root">
+    <div class="container" style="transform-origin: 0 0;transform: scale(containerScale);">
+        <div class="target">
+            Target
+        </div>
+    </div>
+</div>
